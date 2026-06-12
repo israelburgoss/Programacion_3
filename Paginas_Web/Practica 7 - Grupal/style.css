@@ -1,0 +1,154 @@
+:root {
+	--space: 1rem;
+	--radius: 0.75rem;
+	--header-bg: #111111;
+	--section-bg: #f4e4b8;
+	--article-bg: #d6a24f;
+	--footer-bg: #c5161d;
+	--menu-bg: #f4d35e;
+	--text-dark: #1b1b1b;
+	--text-light: #fff8e7;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	padding: var(--space);
+	font-family: Georgia, 'Times New Roman', serif;
+	background: #2b1b18;
+	color: var(--text-dark);
+}
+
+.page {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.panel {
+	margin-bottom: var(--space);
+	border-radius: var(--radius);
+	padding: var(--space);
+}
+
+.panel-header {
+	background: var(--header-bg);
+	color: var(--text-light);
+}
+
+.panel-header a,
+.panel-footer a,
+.menu a {
+	color: inherit;
+}
+
+.panel-header h1,
+.panel-header p,
+.panel-footer p,
+.panel-section p,
+.panel-article p {
+	margin: 0;
+}
+
+.panel-header h1 {
+	margin-bottom: 0.5rem;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.subtitle {
+	margin-bottom: 0.75rem;
+	font-size: 1.05rem;
+}
+
+.menu {
+	background: var(--menu-bg);
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.menu a {
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0.65rem 1rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.panel-section,
+.panel-article {
+	padding: var(--space);
+}
+
+.panel-section {
+	background: var(--section-bg);
+}
+
+.panel-section > p {
+	margin-bottom: var(--space);
+	max-width: 70ch;
+}
+
+.panel-article {
+	background: var(--article-bg);
+}
+
+.panel-article + .panel-article {
+	margin-top: var(--space);
+}
+
+.article-one {
+	background: #b56a2e;
+}
+
+.article-two {
+	color: var(--text-light);
+	background-image: url('../assets/img/background_article.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.article-two p,
+.article-two h2 {
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.panel-article h2 {
+	margin: 0 0 0.75rem;
+	font-size: 1.5rem;
+}
+
+.article-image {
+	display: block;
+	float: right;
+	width: min(42%, 260px);
+	height: auto;
+	margin: 0 0 0.9rem 1rem;
+	border-radius: 0.6rem;
+	border: 4px solid rgba(255, 248, 231, 0.55);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.article-one::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.panel-footer {
+	background: var(--footer-bg);
+	color: var(--text-light);
+	text-align: center;
+}
+
+.panel-footer p {
+	font-weight: 700;
+}

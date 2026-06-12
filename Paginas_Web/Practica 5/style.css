@@ -1,0 +1,19 @@
+body
+  {
+   font-family:Arial;
+   background-color: #a9a9a9;
+   color:#2c3e90;
+   text-align:center;
+   padding: 24px; /*Espaciado entre celdas*/
+  }
+
+  table, th, td
+  {
+   border: 2px solid red;
+   border-collapse:collapse; /*uner los bordes dobles en una linea*/
+   font-family:Sans-serif;
+   background-color: #f4f4f9;
+   color:#856;
+   text-align:center;
+   padding: 8px; /*Espaciado entre celdas*/
+  }
